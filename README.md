@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+# Hacking Challenge - Cotizador Seguro Vehicular
+
+Developer: Nick Correa Garcia
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
