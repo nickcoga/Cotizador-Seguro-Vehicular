@@ -1,52 +1,103 @@
 import styled from "@emotion/styled";
-import Lady from "../../../assets/lady_login.svg";
-import LadyCar from "../../../assets/lady_login_car.svg";
-import font from "../../../assets/font.svg";
+import LadyCarDesktop from "../../../assets/lady_car_desktop.svg";
+import LadyCarMobile from "../../../assets/lady_car_mobile.svg";
+import HomeBackground from "../../../assets/home_background.svg";
 import { colors } from "../../../constants/ColorStyles";
 
 export default function Banner() {
   return (
     <Content>
-      <Contentleft>
+      <ContentText>
         <Text>¡Nuevo!</Text>
         <Title>Seguro Vehicular Tracking</Title>
         <Paragraph>Cuentanos donde le haras seguimiento a tu seguro</Paragraph>
-      </Contentleft>
-      <img className="img" src={LadyCar} alt="Ladycar.svg" />
-      <ContentRight />
+      </ContentText>
+
+      <ContentImage>
+        <img
+          className="mobile__only lady_car_mobile"
+          src={LadyCarMobile}
+          alt="Lady with car"
+        />
+        <img
+          className="desktop__only home_background"
+          src={HomeBackground}
+          alt="Home"
+        />
+        <img
+          className="desktop__only lady_car_desktop" // TODO: check BEM convention for classes
+          src={LadyCarDesktop}
+          alt="Lady with car"
+        />
+      </ContentImage>
+
+      <Copyright>© 2020 RIMAC Seguros y Reaseguros.</Copyright>
     </Content>
   );
 }
 
 const Content = styled.div`
-  width: 45%;
-  height: 920px;
-  display: flex;
-  flex-direction: center;
-  background: url(${font});
-  background-size: 865px 900px;
-  background-repeat: no-repeat;
-  background-position: 0px 0px;
-  .img {
-    position: absolute;
-    top: 200px;
-    left: 300px;
+  background-color: ${colors.LightPurple};
+  padding-top: 50px;
+
+  .mobile__only {
+    display: initial;
+  }
+  .desktop__only {
+    display: none;
   }
 
-  @media (max-width: 768px) {
-    flex-direction: row;
-    width: 100%;
-    background: ${colors.Purple};
-    background-repeat: no-repeat;
-    .img {
-      display: none !important;
+  @media (min-width: 768px) {
+    width: 39vw;
+    height: 100vh;
+
+    .mobile__only {
+      display: none;
+    }
+    .desktop__only {
+      display: initial;
+    }
+
+    display: flex;
+    flex-direction: column-reverse;
+  }
+`;
+
+const ContentText = styled.div`
+  position: absolute;
+  top: 20vw;
+  left: 5vh;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 25vw;
+    left: 28vh;
+  }
+`;
+
+const ContentImage = styled.div`
+  .lady_car_mobile {
+    position: relative;
+    left: 69vw;
+    top: 7vh;
+  }
+
+  @media (min-width: 768px) {
+    .home_background {
+      width: 100%;
+    }
+    .lady_car_desktop {
+      position: absolute;
+      left: 17vw;
+      top: 23vh;
+
+      width: 10vw;
     }
   }
 `;
 
 const Text = styled.h2`
   width: 46px;
-  height: 16px;
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
@@ -55,59 +106,55 @@ const Text = styled.h2`
   letter-spacing: 0.8px;
   text-transform: uppercase;
   color: ${colors.DarkPurple};
+
+  @media (min-width: 768px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
 `;
 
 const Title = styled.h1`
-  width: 200px;
-  height: 72px;
+  width: 80%;
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
   line-height: 36px;
   letter-spacing: -0.6px;
+  color: ${colors.DarkPurple};
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 48px;
+  }
 `;
 
 const Paragraph = styled.p`
-  width: 90%;
-  height: 48px;
+  width: 50%;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   color: ${colors.DarkPurple};
-  @media (max-width: 768px) {
-    width: 70%;
+
+  @media (min-width: 768px) {
+    width: 90%;
   }
 `;
 
-const Contentleft = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 500px;
-  left: 300px;
-  @media (max-width: 768px) {
+const Copyright = styled.div`
+  display: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  @media (min-width: 768px) {
     position: absolute;
-    top: 90px;
-    left: 50px;
-  }
-`;
-
-const ContentRight = styled.div`
-  position: absolute;
-  left: 260px;
-  top: 88px;
-  background: url(${LadyCar});
-  @media (max-width: 768px) {
-    position: absolute;
-    width: 142.61px;
-    height: 240px;
-    left: 260px;
-    top: 88px;
-    flex-direction: row;
-    background: url(${Lady});
-    background-repeat: no-repeat;
+    top: 47vw;
+    left: 25vh;
+    display: initial;
   }
 `;
