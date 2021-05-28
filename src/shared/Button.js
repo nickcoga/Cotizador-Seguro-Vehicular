@@ -6,6 +6,7 @@ import ChevronRight from "../assets/chevron_right.svg";
 const StyledButton = styled.button(
   (props) => css`
     width: 82vw;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
