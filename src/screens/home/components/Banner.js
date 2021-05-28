@@ -65,13 +65,13 @@ const Content = styled.div`
 
 const ContentText = styled.div`
   position: absolute;
-  top: 20vw;
-  left: 5vh;
+  top: 10vh;
+  left: 8vw;
 
   @media (min-width: 768px) {
     position: absolute;
-    top: 25vw;
-    left: 28vh;
+    top: 50vh;
+    left: 15vw;
   }
 `;
 
@@ -153,8 +153,8 @@ const Copyright = styled.div`
   letter-spacing: 0.2px;
   @media (min-width: 768px) {
     position: absolute;
-    top: 47vw;
-    left: 25vh;
+    top: 92vh;
+    left: 14vw;
     display: initial;
   }
 `;
