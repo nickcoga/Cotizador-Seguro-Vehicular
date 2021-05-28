@@ -1,14 +1,14 @@
 import styled from "@emotion/styled";
-import { InputText } from "../../../shared/Inputs.js";
+import InputText from "../../../shared/InputText.js";
 import { useState } from "react";
-// import Checkbox from "./Checkbox.js";
 import Button from "../../../shared/Button.js";
+import { Link, useHistory } from "react-router-dom";
 
-export default function FormLogin() {
+export default function FormLogin({ setUser }) {
   const [dni, setDni] = useState("");
   const [phone, setPhone] = useState("");
   const [placa, setPlaca] = useState(""); // TODO: use english
-  // const [checked, setCheked] = useState({ checked: false });
+  let history = useHistory();
 
   const handleSubmit = (e) => {
     console.log("antes de prevent deafult");
@@ -25,7 +25,11 @@ export default function FormLogin() {
         }
       )
         .then((response) => response.json())
-        .then((json) => console.log(json));
+        .then((json) => {
+          setUser(json[0]);
+          console.log(json);
+          history.push(`/cardata/${json[0].id}`);
+        });
     } catch (error) {
       console.error(error); // TODO: show error message on screen
     }
@@ -55,7 +59,6 @@ export default function FormLogin() {
         value={placa}
         onChange={(e) => setPlaca(e.target.value)}
       />
-      {/* <Checkbox checked={checked} onChange={(e) => setCheked(e.target.value)} /> */}
       {console.log(dni, phone, placa)}
       <Label>
         <input type="checkbox" required />
@@ -103,3 +106,4 @@ const Label = styled.label`
     width: 15vw;
   }
 `;
+// TODO: change checkbox color
