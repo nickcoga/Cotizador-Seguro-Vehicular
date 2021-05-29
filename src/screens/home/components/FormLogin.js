@@ -2,15 +2,16 @@ import styled from "@emotion/styled";
 import InputText from "../../../shared/InputText.js";
 import { useState } from "react";
 import Button from "../../../shared/Button.js";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-export default function FormLogin({ setUser }) {
+export default function FormLogin({ setUser, plate, setPlate }) {
   const [dni, setDni] = useState("");
   const [phone, setPhone] = useState("");
-  const [placa, setPlaca] = useState(""); // TODO: use english
+  // const [plate, setPlate] = useState("");
   let history = useHistory();
 
   const handleSubmit = (e) => {
+    // TODO: disable button until request is resolved to avoid making more than one request if user clicks too quickly
     console.log("antes de prevent deafult");
     e.preventDefault();
     console.log("about to submit the form");
@@ -56,10 +57,10 @@ export default function FormLogin({ setUser }) {
         required
         label=""
         placeholder="Placa"
-        value={placa}
-        onChange={(e) => setPlaca(e.target.value)}
+        value={plate}
+        onChange={(e) => setPlate(e.target.value)}
       />
-      {console.log(dni, phone, placa)}
+      {console.log(dni, phone, plate)}
       <Label>
         <input type="checkbox" required />
         Acepto la Política de Protecciòn de Datos Personales y los Términos y
