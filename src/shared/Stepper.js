@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Fragment } from "react";
-import { colors } from "../../../constants/ColorStyles";
-import Progressbar from "../../../shared/Progressbar";
+import { colors } from "../constants/ColorStyles.js";
+import Progressbar from "./Progressbar";
 
 export default function Stepper() {
   return (
