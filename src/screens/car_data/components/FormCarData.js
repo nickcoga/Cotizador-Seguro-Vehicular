@@ -6,7 +6,7 @@ import { colors } from "../../../constants/ColorStyles.js";
 import yearOptions from "../../../constants/YearOptions.js";
 import Button from "../../../shared/Button.js";
 import { useHistory } from "react-router";
-import Brands from "../../../constants/Brand.js";
+import Brands from "../../../constants/Brands.js";
 
 export default function FormCarData({ user, year, setYear, brand, setBrand }) {
   let history = useHistory();
