@@ -76,32 +76,3 @@ const ContainerRight = styled.div`
 const Text = styled.p`
   color: ${colors.Purple};
 `;
-//   width: 20%;
-//   display: none;
-//   padding: 8px 0px;
-//   margin: 5px;
-//   font-family: Roboto;
-//   font-style: normal;
-//   font-weight: normal;
-//   font-size: 12px;
-//   line-height: 20px;
-//   letter-spacing: 0.2px;
-//   @media (min-width: 768px) {
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: center;
-//   }
-// `;
-
-// width: 60%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   gap: 8.8px;
-//   padding: 0px 10px;
-//   margin: 0px;
-//   @media (min-width: 768px) {
-//     width: 30%;
-//     flex-direction: row;
-//   }
