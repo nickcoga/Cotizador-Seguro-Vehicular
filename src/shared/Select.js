@@ -72,6 +72,7 @@ function Select({
   caption = "",
   icon,
   error = false,
+  showDefaultOption = false,
   placeholder = "",
   name = "",
   value,
@@ -90,9 +91,11 @@ function Select({
           id={name}
           onChange={onChange}
         >
-          <option disabled value="">
-            {placeholder}
-          </option>
+          {showDefaultOption ? (
+            <option disabled value="">
+              {placeholder}
+            </option>
+          ) : null}
           {options.map((option) => (
             <option key={option.value} value={option.value}>
               {option.text}
