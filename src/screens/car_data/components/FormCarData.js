@@ -7,7 +7,7 @@ import yearOptions from "../../../constants/YearOptions.js";
 import Button from "../../../shared/Button.js";
 import { useHistory } from "react-router";
 import Brands from "../../../constants/Brands.js";
-import { largeNumberFormatter } from "../../../helpers/index.js";
+import { helpers } from "../../../helpers/index.js";
 
 export default function FormCarData({ user, year, setYear, brand, setBrand }) {
   let history = useHistory();
@@ -82,7 +82,7 @@ export default function FormCarData({ user, year, setYear, brand, setBrand }) {
             <div>
               <div>$ </div>
               <input type="number" value={sum} readOnly />
-              <div>{largeNumberFormatter(sum)}</div>
+              <div>{helpers.largeNumberFormatter(sum)}</div>
             </div>
             <span onClick={handleIncrement}> + </span>
           </InputNumber>
