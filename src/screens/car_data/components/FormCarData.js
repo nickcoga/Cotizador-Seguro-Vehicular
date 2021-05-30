@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Select from "../../../shared/Select.js";
 import Car from "../../../assets/car.svg";
 import { colors } from "../../../constants/ColorStyles.js";
@@ -7,13 +7,23 @@ import yearOptions from "../../../constants/YearOptions.js";
 import Button from "../../../shared/Button.js";
 import { useHistory } from "react-router";
 import Brands from "../../../constants/Brands.js";
+import helpers from "../../../helpers/index.js";
 
 export default function FormCarData({ user, year, setYear, brand, setBrand }) {
   let history = useHistory();
+  const [sum, setSum] = useState(14300);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     history.push(`/buildplan`);
+  };
+
+  const handleDecrement = () => {
+    if (sum > 12500) setSum(sum - 100);
+  };
+
+  const handleIncrement = () => {
+    if (sum < 16500) setSum(sum + 100);
   };
 
   return (
@@ -68,20 +78,13 @@ export default function FormCarData({ user, year, setYear, brand, setBrand }) {
             <label>MAX $16.500</label>
           </div>
           <InputNumber>
-            <span> — </span>
+            <span onClick={handleDecrement}> — </span>
             <div>
-              <span> $ </span>
-              <input
-                type="number"
-                value="14.500"
-                onChange={() => {
-                  // TODO: set an onChange handler
-                }}
-                min="12.500"
-                max="16.500"
-              />
+              <div>$ </div>
+              <input type="number" value={sum} readOnly />
+              <div>{helpers.largeNumberFormatter(sum)}</div>
             </div>
-            <span> + </span>
+            <span onClick={handleIncrement}> + </span>
           </InputNumber>
           <Button showArrow type="submit" form="form-cardata">
             CONTINUAR
@@ -324,7 +327,23 @@ const InputNumber = styled.div`
     width: 40vw;
     height: 5vh;
     text-align: center;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
   }
+  span {
+    color: ${colors.Purple};
+  }
+  div {
+    display: flex;
+    align-items: center;
+  }
+  input {
+    display: none;
+  }
+  height: 56px;
   @media (min-width: 768px) {
     width: 12vw;
     position: absolute;
