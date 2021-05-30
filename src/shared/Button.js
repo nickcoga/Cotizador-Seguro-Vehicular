@@ -22,6 +22,7 @@ const StyledButton = styled.button(
     font-size: 14px;
     line-height: 16px;
     cursor: pointer;
+    text-transform: uppercase;
     &:hover {
       background: ${colors.ShallowPink};
     }
