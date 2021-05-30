@@ -19,7 +19,9 @@ export default function FormCarData({ user, year, setYear, brand, setBrand }) {
   return (
     <Fragment>
       <Formcardata id="form-cardata" onSubmit={handleSubmit}>
-        <TextName>¡Hola, {user.name}!</TextName>
+        <TextName>
+          ¡Hola, <Name>{user.name}!</Name>
+        </TextName>
         <TextDescription>Completa los datos de tu auto</TextDescription>
 
         <Content>
@@ -123,6 +125,10 @@ const TextName = styled.p`
   letter-spacing: -0.6px;
 `;
 
+const Name = styled.span`
+  color: ${colors.Red};
+`;
+
 const TextDescription = styled.p`
   font-family: Roboto;
   font-style: normal;
@@ -189,6 +195,7 @@ const HelpButton = styled.button`
   @media (min-width: 768px) {
     flex-direction: row-reverse;
     width: 14vw;
+    background-color: initial;
   }
 `;
 
