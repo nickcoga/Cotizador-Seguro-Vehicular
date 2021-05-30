@@ -39,6 +39,7 @@ const StepperMobile = styled.div`
 
 const StepperDesktop = styled.div`
   display: none;
+  position: fixed;
   @media (min-width: 768px) {
     width: 30vw;
     height: calc(100vh - 64px);
