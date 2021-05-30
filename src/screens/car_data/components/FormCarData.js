@@ -12,11 +12,7 @@ export default function FormCarData({ user, year, setYear, brand, setBrand }) {
   let history = useHistory();
 
   const handleSubmit = (e) => {
-    // debugger;
-    console.log("antes de prevent deafult");
     e.preventDefault();
-    console.log(year);
-    // debugger;
     history.push(`/buildplan`);
   };
 
@@ -44,14 +40,22 @@ export default function FormCarData({ user, year, setYear, brand, setBrand }) {
         </Content>
 
         <ContentRadioButtons>
-          <label>
-            <input type="radio" name="radio_option" value="si" />
-            Si
-          </label>
-          <label>
-            <input type="radio" name="radio_option" value="no" />
-            No
-          </label>
+          <input
+            className="radio"
+            id="radio-button-yes"
+            type="radio"
+            name="radio_option"
+            value="yes"
+          />
+          <label htmlFor="radio-button-yes">Si</label>
+          <input
+            id="radio-button-no"
+            type="radio"
+            name="radio_option"
+            value="no"
+            defaultChecked
+          />
+          <label htmlFor="radio-button-no">No</label>
         </ContentRadioButtons>
 
         <ContentSum>
@@ -211,11 +215,51 @@ const ContentRadioButtons = styled.div`
   top: 50vh;
   left: 0vw;
   display: flex;
-  gap: 36px;
+
+  input[type="radio"] + label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    margin-right: 15px;
+    font-size: 16px;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin-right: 14px;
+      position: absolute;
+      top: -3px;
+      left: 0;
+      border: 1px solid ${colors.Green};
+      background-color: #fff;
+      border-radius: 50%;
+    }
+  }
+
+  input[type="radio"] {
+    display: none !important;
+    *display: inline;
+
+    &:checked + label:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: ${colors.Green};
+    }
+  }
+
   @media (min-width: 768px) {
     top: 30vh;
     left: 16vw;
-    gap: 4vw;
+    gap: 36px;
   }
 `;
 
