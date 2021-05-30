@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Banner from "./components/Banner";
 import FormLogin from "./components/FormLogin";
-import Header from "../../shared/Header.js";
+import Header from "../../shared/Header";
 
 export default function Home({ setUser, plate, setPlate }) {
   return (

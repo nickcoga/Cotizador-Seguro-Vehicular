@@ -7,8 +7,8 @@ import Home from "./screens/home/Home";
 function App() {
   const [user, setUser] = useState();
   const [plate, setPlate] = useState();
-  const [year, setYear] = useState();
-  const [brand, setBrand] = useState();
+  const [year, setYear] = useState(2019);
+  const [brand, setBrand] = useState("Wolkswagen");
 
   return (
     <Router>
