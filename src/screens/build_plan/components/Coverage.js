@@ -32,12 +32,12 @@ const Content = styled.div`
   padding: 40px 0px 56px 0px;
   background-color: ${colors.LightPurple};
   position: absolute;
-  top: 12vh;
+  top: 15vh;
   left: 0vw;
   @media (min-width: 768px) {
     width: 28vw;
-    top: 12vh;
-    left: 40vw;
+    top: 15vh;
+    left: 35vw;
     background-color: ${colors.White};
   }
 `;
@@ -76,10 +76,10 @@ const Card = styled.div`
   flex-direction: column;
   padding: 24px;
   .person__Card {
-    width: 10vh;
+    width: 12vh;
     position: absolute;
     top: 16vh;
-    left: 70vw;
+    left: 69vw;
   }
   @media (min-width: 768px) {
     width: 23vw;
