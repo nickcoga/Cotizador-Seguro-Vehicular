@@ -1,10 +1,7 @@
 import styled from "@emotion/styled";
-import Logo from ".././assets/rimac_logo.svg";
-import Phone from ".././assets/ic_phone.svg";
-import { colors } from ".././constants/ColorStyles.js";
-// TODO: move Header component to shre
-// mobile: 360 x 56
-// desktop header: 1360 x 64
+import Logo from "../assets/rimac_logo.svg";
+import Phone from "../assets/ic_phone.svg";
+import { colors } from "../constants/ColorStyles.js";
 
 export default function Header({ showBorder }) {
   return (
@@ -16,8 +13,8 @@ export default function Header({ showBorder }) {
       <ContainerRight>
         <Text className="desktop-only gray">¿Tienes alguna duda?</Text>
         <img src={Phone} alt="phone.svg" />
-        <Text className="mobile-only">Llámanos</Text>
-        <Text className="desktop-only">(01) 411 6001</Text>
+        <TextR className="mobile-only">Llámanos</TextR>
+        <TextR className="desktop-only">(01) 411 6001</TextR>
       </ContainerRight>
     </Navbar>
   );
@@ -61,7 +58,6 @@ const ContainerRight = styled.div`
   .gray {
     color: ${colors.Gray};
   }
-  // TODO: change color
 
   @media (min-width: 768px) {
     .mobile-only {
@@ -75,4 +71,18 @@ const ContainerRight = styled.div`
 
 const Text = styled.p`
   color: ${colors.Purple};
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+`;
+
+const TextR = styled.p`
+  color: ${colors.Purple};
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
 `;

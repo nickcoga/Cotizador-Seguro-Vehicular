@@ -64,9 +64,8 @@ const StepperDesktop = styled.div`
     .dottep__line {
       width: 4px;
       position: absolute;
-      top: 15px; // 12vh;
-      left: 9px; // calc(9vw + 9px);
-      // border: 1px solid black;
+      top: 15px;
+      left: 9px;
     }
   }
 `;
