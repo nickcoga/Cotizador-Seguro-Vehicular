@@ -94,9 +94,11 @@ export default function FormCarData({
             </div>
             <span onClick={handleIncrement}> + </span>
           </InputNumber>
-          <Button showArrow type="submit" form="form-cardata">
-            CONTINUAR
-          </Button>
+          <ContainerButton>
+            <Button showArrow type="submit" form="form-cardata">
+              CONTINUAR
+            </Button>
+          </ContainerButton>
         </ContentSum>
       </Formcardata>
       <Line />
@@ -107,7 +109,7 @@ export default function FormCarData({
           <img src={Car} alt="Car" />
           <div className="text__helpbutton">
             <div>¿No encuentras el modelo?</div>
-            <div className="text__helbutton--colorclick">CLIC AQUÍ</div>
+            <div className="text__helpbutton--colorclick">CLIC AQUÍ</div>
           </div>
         </HelpButton>
       </ContenRight>
@@ -153,7 +155,9 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80vw;
   @media (min-width: 768px) {
+    width: 20vw;
   }
 `;
 
@@ -166,22 +170,22 @@ const ContenRight = styled.div`
   gap: 16px;
   align-items: flex-start;
   @media (min-width: 768px) {
-    top: 18vh;
-    left: 67vw;
+    top: 26vh;
+    left: 60vw;
   }
 `;
 
 const Label = styled.label`
   display: none;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.6px;
   text-transform: uppercase;
   @media (min-width: 768px) {
     display: initial;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
   }
 `;
 
@@ -201,13 +205,24 @@ const HelpButton = styled.button`
     align-items: flex-start;
     gap: 4px;
   }
-  .text__helbutton--colorclick {
+  .text__helpbutton--colorclick {
     color: ${colors.Purple};
   }
   @media (min-width: 768px) {
+    border-top: 1px solid ${colors.LightPurple};
+    border-radius: initial;
     flex-direction: row-reverse;
-    width: 14vw;
+    width: 10vw;
+    height: 8vh;
+
     background-color: initial;
+    padding: 0px;
+    .text__helpbutton {
+      text-align: left;
+    }
+    .text__helpbutton--colorclick {
+      color: ${colors.Purple};
+    }
   }
 `;
 
@@ -231,6 +246,7 @@ const Text = styled.p`
 
 const ContentRadioButtons = styled.div`
   position: absolute;
+
   top: 64vh;
   left: 0vw;
   display: flex;
@@ -276,20 +292,21 @@ const ContentRadioButtons = styled.div`
   }
 
   @media (min-width: 768px) {
-    top: 30vh;
-    left: 16vw;
+    top: 28.5vh;
+    left: 12vw;
     gap: 36px;
   }
 `;
 
 const Line = styled.hr`
+  display: none;
   width: 100vw;
   position: absolute;
   top: calc(136vh - 75px);
   left: 0vw;
   border: 1px solid ${colors.BorderGray};
   @media (min-width: 768px) {
-    width: 27vw;
+    width: 20vw;
     top: 48vh;
     left: 37vw;
   }
@@ -301,7 +318,6 @@ const ContentSum = styled.div`
   left: 0vw;
   display: flex;
   flex-direction: column;
-  gap: 15px;
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
@@ -311,7 +327,11 @@ const ContentSum = styled.div`
     display: flex;
     gap: 5px;
     font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
     line-height: 16px;
+    padding: 4px 0px 16px 0px;
+    color: ${colors.RegularGray};
   }
   @media (min-width: 768px) {
     width: 28vw;
@@ -321,6 +341,8 @@ const ContentSum = styled.div`
       width: 12vw;
       padding: 2px;
       gap: 10px;
+      padding: 4px 0px 46px 0px;
+      font-size: 12px;
     }
   }
 `;
@@ -333,6 +355,7 @@ const InputNumber = styled.div`
   border: 1px solid black;
   border-radius: 4px;
   gap: 10px;
+
   input {
     border: none;
     width: 40vw;
@@ -356,21 +379,36 @@ const InputNumber = styled.div`
   }
   height: 56px;
   @media (min-width: 768px) {
-    width: 12vw;
+    width: 8vw;
     position: absolute;
     top: 1vh;
-    left: 15vw;
+    left: 12vw;
     input {
       width: 5vw;
     }
   }
 `;
 
+const ContainerButton = styled.div`
+  display: flex;
+  width: 80vw;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 56px;
+  @media (min-width: 768px) {
+    align-items: flex-start;
+    width: 10vw;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+`;
+
 const Copyright = styled.div`
+  width: 100vw;
   position: absolute;
   top: 125vh;
-  left: 24vw;
-  padding: 30px 0px;
+  left: 0vw;
+  padding: 30px 0px 30px 32px;
   display: flex;
   font-family: Roboto;
   font-style: normal;
@@ -378,6 +416,7 @@ const Copyright = styled.div`
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 0.2px;
+  border-top: 1px solid ${colors.BorderGray};
   @media (min-width: 768px) {
     top: 92vh;
     left: 14vw;

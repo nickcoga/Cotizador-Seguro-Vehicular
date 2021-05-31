@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import BuildPlan from "./screens/build_plan/BuildPlan";
 import CarData from "./screens/car_data/CarData";
 import Home from "./screens/home/Home";
-import ThanksPage from "./screens/thanks_page/Thanks_page";
+import Thanks from "./screens/thanks/Thanks";
 
 function App() {
   const [user, setUser] = useState();
@@ -55,7 +55,7 @@ function App() {
             />
           )}
         />
-        <Route path="/thankspage" component={ThanksPage} />
+        <Route path="/thanks" component={Thanks} />
       </Switch>
     </Router>
   );

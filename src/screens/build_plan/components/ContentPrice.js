@@ -3,6 +3,7 @@ import Flexible from "../../../assets/flexible_vehicular.svg";
 import Check from "../../../assets/check.svg";
 
 import { colors } from "../../../constants/ColorStyles";
+import Button from "../../../shared/Button";
 export default function ContentPrice() {
   return (
     <Container>
@@ -39,7 +40,9 @@ export default function ContentPrice() {
             <label>Aros gratis</label>
           </div>
         </div>
-        <Button>Lo quiero</Button>
+        <ContentButton>
+          <Button>Lo quiero</Button>
+        </ContentButton>
       </ContentDetails>
     </Container>
   );
@@ -128,47 +131,10 @@ const ContentDetails = styled.div`
   }
 `;
 
-const Button = styled.button`
+const ContentButton = styled.div`
   width: 60vw;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  outline: none;
-  padding: 16px;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 8px;
-  border: 1px solid ${colors.Red};
-  background-color: ${colors.Red};
-  color: ${colors.White};
-  font-size: 14px;
-  line-height: 16px;
-  cursor: pointer;
-  text-transform: uppercase;
-  &:hover {
-    background: ${colors.ShallowPink};
-  }
   @media (min-width: 768px) {
-    width: 15vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    outline: none;
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: center;
-    border-radius: 8px;
-    border: 1px solid ${colors.Red};
-    background-color: ${colors.Red};
-    color: ${colors.White};
-    font-size: 14px;
-    line-height: 16px;
-    cursor: pointer;
-    &:hover {
-      background: ${colors.ShallowPink};
-    }
+    width: 224px;
+    padding-top: 32px;
   }
 `;

@@ -15,4 +15,5 @@ export const colors = {
   Red: "#EF3340",
   Green: "#7CC954",
   StepColor: "#C5CBE0",
+  RegularGray: "#676F8F",
 };

@@ -5,7 +5,7 @@ import Header from "../../shared/Header";
 import { colors } from "../../constants/ColorStyles";
 import Button from "../../shared/Button";
 
-export default function ThanksPage() {
+export default function Thanks() {
   return (
     <Container>
       <Header showBorder />
@@ -32,9 +32,9 @@ export default function ThanksPage() {
 
           <Email> joel.sanchez@gmail.com</Email>
         </Description>
-        <ContentButton>
+        <ContainerButton>
           <Button>CÓMO USAR MI SEGURO</Button>
-        </ContentButton>
+        </ContainerButton>
         <Footer>© 2020 RIMAC Seguros y Reaseguros.</Footer>
       </ContentText>
     </Container>
@@ -48,7 +48,7 @@ const Container = styled.div`
   @media (min-width: 768px) {
     width: 100vw;
     position: absolute;
-    top: 6.5vh;
+    top: 64px;
     flex-direction: row;
   }
 `;
@@ -60,7 +60,7 @@ const ContentImage = styled.div`
 
     .person--desktop {
       width: 36vw;
-      padding: 4vw 0vw;
+      height: calc(100vh - 67px);
     }
   }
 `;
@@ -91,7 +91,7 @@ const Title = styled.span`
   color: ${colors.Red};
   padding: 30px 0px 24px 0px;
   @media (min-width: 768px) {
-    width: initial;
+    width: 25vw;
     font-size: 36px;
     line-height: 48px;
   }
@@ -101,12 +101,12 @@ const SubTitle = styled.span`
   width: 86vw;
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 36px;
+  line-height: 48px;
   color: ${colors.DarkGray};
   padding-bottom: 24px;
   @media (min-width: 768px) {
-    width: initial;
+    width: 25vw;
   }
 `;
 
@@ -129,12 +129,12 @@ const Description = styled.span`
 
 const Email = styled.span``;
 
-const ContentButton = styled.div`
+const ContainerButton = styled.div`
   display: flex;
+  width: 296px;
   justify-content: center;
   padding-bottom: 56px;
   @media (min-width: 768px) {
-    width: initial;
     width: 255px;
   }
 `;

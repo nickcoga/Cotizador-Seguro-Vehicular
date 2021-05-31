@@ -21,7 +21,7 @@ const Caption = styled.span(
 
 const Container = styled.div(
   (props) => css`
-    width: 80vw;
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 4px 12px;
@@ -39,7 +39,7 @@ const Container = styled.div(
       box-shadow: ${`0px 0px 4px ${colors.ShallowPink}`};
     }
     @media (min-width: 768px) {
-      width: 21vw;
+      width: 100%;
       height: 56px;
     }
   `
