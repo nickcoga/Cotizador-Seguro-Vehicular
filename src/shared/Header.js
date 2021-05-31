@@ -11,10 +11,10 @@ export default function Header({ showBorder }) {
       </ContainerLeft>
 
       <ContainerRight>
-        <Text className="desktop-only gray">¿Tienes alguna duda?</Text>
+        <Text className="only--desktop gray">¿Tienes alguna duda?</Text>
         <img src={Phone} alt="phone.svg" />
-        <TextR className="mobile-only">Llámanos</TextR>
-        <TextR className="desktop-only">(01) 411 6001</TextR>
+        <TextR className="only--mobile">Llámanos</TextR>
+        <TextR className="only--desktop">(01) 411 6001</TextR>
       </ContainerRight>
     </Navbar>
   );
@@ -48,24 +48,8 @@ const ContainerRight = styled.div`
   align-items: center;
   gap: 2.4vw;
 
-  .mobile-only {
-    display: initial;
-  }
-  .desktop-only {
-    display: none;
-  }
-
   .gray {
     color: ${colors.Gray};
-  }
-
-  @media (min-width: 768px) {
-    .mobile-only {
-      display: none;
-    }
-    .desktop-only {
-      display: initial;
-    }
   }
 `;
 

@@ -29,13 +29,13 @@ export default function ContentCoverage({
           <TextCoverage>{titleCoverage}</TextCoverage>
 
           <img
-            className="only__desktop"
+            className="only--desktop"
             src={showText ? ChevronDown : ChevronUp}
             alt={`Chevron ${showText ? "down" : "up"}`}
             onClick={handleChevronClick}
           />
 
-          <div className="only__mobile">
+          <div className="only--mobile">
             <Toogle />
           </div>
 
@@ -63,7 +63,7 @@ export default function ContentCoverage({
         ) : null}
 
         {/* TODO: textarea text should be state of this component. */}
-        <div className="only__mobile" onClick={handleChevronClick}>
+        <div className="only--mobile" onClick={handleChevronClick}>
           <label>Ver {showText ? "menos" : "más"}</label>
           <img
             src={showText ? ChevronDown : ChevronUp}
@@ -93,20 +93,11 @@ const Container = styled.div`
     font-size: 14px;
     line-height: 24px;
   }
-  .only__desktop {
-    display: none;
-  }
   @media (min-width: 768px) {
     width: 17vw;
 
     .text__area {
       width: 16vw;
-    }
-    .only__desktop {
-      display: initial;
-    }
-    .only__mobile {
-      display: none;
     }
   }
 `;

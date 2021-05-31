@@ -15,7 +15,7 @@ export default function ContentPrice() {
         <ContentLogo>
           <div>
             <img
-              className="only__desktop"
+              className="only--desktop"
               src={Flexible}
               alt="Flexible Vehicular"
             />
@@ -24,8 +24,8 @@ export default function ContentPrice() {
       </Content>
       <Line />
       <ContentDetails>
-        <div className="only__desktop">El precio incluye:</div>
-        <div className="list only__desktop">
+        <div className="only--desktop">El precio incluye:</div>
+        <div className="list only--desktop">
           <div>
             <img src={Check} alt="Check" />
             <label>Llanta de repuesto</label>
@@ -108,9 +108,6 @@ const Line = styled.hr`
 `;
 
 const ContentDetails = styled.div`
-  .only__desktop {
-    display: none;
-  }
   @media (min-width: 768px) {
     width: 15vw;
     position: absolute;
@@ -124,9 +121,6 @@ const ContentDetails = styled.div`
       display: flex;
       flex-direction: column;
       gap: 10px;
-    }
-    .only__desktop {
-      display: initial;
     }
   }
 `;

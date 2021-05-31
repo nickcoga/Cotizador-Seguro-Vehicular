@@ -8,8 +8,7 @@ export default function Toogle() {
 
   return (
     <div className="container">
-      <Content className="only__mobile">
-        {/* TODO: remove if unnecesary */}
+      <Content className="only--mobile">
         <label className="toogle switch">
           <input type="checkbox" onChange={handleChange} /> <div></div>
         </label>

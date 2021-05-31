@@ -13,3 +13,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.only--desktop {
+  display: none;
+}
+.only--mobile {
+  display: initial;
+}
+
+@media (min-width: 768px) {
+  .only--desktop {
+    display: initial;
+  }
+  .only--mobile {
+    display: none;
+  }
+}

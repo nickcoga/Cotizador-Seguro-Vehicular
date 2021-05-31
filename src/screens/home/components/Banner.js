@@ -15,17 +15,17 @@ export default function Banner() {
 
       <ContentImage>
         <img
-          className="mobile__only lady_car_mobile"
+          className="only--mobile lady_car_mobile"
           src={LadyCarMobile}
           alt="Lady with car"
         />
         <img
-          className="desktop__only home_background"
+          className="only--desktop home_background"
           src={HomeBackground}
           alt="Home"
         />
         <img
-          className="desktop__only lady_car_desktop" // TODO: check BEM convention for classes
+          className="only--desktop lady_car_desktop" // TODO: check BEM convention for classes
           src={LadyCarDesktop}
           alt="Lady with car"
         />
@@ -40,24 +40,9 @@ const Content = styled.div`
   background-color: ${colors.LightPurple};
   padding-top: 50px;
 
-  .mobile__only {
-    display: initial;
-  }
-  .desktop__only {
-    display: none;
-  }
-
   @media (min-width: 768px) {
     width: 39vw;
     height: 100vh;
-
-    .mobile__only {
-      display: none;
-    }
-    .desktop__only {
-      display: initial;
-    }
-
     display: flex;
     flex-direction: column-reverse;
   }

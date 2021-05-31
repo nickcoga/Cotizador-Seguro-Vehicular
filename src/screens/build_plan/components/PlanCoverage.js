@@ -10,9 +10,11 @@ export default function PlanCoverage() {
     <Container>
       <Title>Agregar o quita coberturas</Title>
       <ContentTab>
-        <Tab class="tab tab-active active-tab">Protege a tu auto</Tab>
-        <Tab class="tab tab-active active-tab">Protege a los que te rodean</Tab>
-        <Tab class="tab tab-active active-tab">Mejora tu plan</Tab>
+        <Tab className="tab tab-active active-tab">Protege a tu auto</Tab>
+        <Tab className="tab tab-active active-tab">
+          Protege a los que te rodean
+        </Tab>
+        <Tab className="tab tab-active active-tab">Mejora tu plan</Tab>
       </ContentTab>
       <ContentCoverage img={StolenTire} titleCoverage="Llanta Robada" />
       <ContentCoverage
