@@ -32,11 +32,11 @@ export default function ContentPrice() {
           </div>
           <div>
             <img src={Check} alt="Check" />
-            <label>Llanta de repuesto</label>
+            <label>Analisis de motor</label>
           </div>
           <div>
             <img src={Check} alt="Check" />
-            <label>Llanta de repuesto</label>
+            <label>Aros gratis</label>
           </div>
         </div>
         <Button>Lo quiero</Button>
@@ -49,14 +49,16 @@ const Container = styled.div`
   width: 90vw;
   display: flex;
   gap: 15vw;
-  position: absolute;
-  top: 135vh;
-  left: 6vw;
+  top: 190vh;
+  padding: 40px 0px;
+  margin: auto;
   @media (min-width: 768px) {
+    position: absolute;
     flex-direction: column;
     width: 15vw;
     top: 27vh;
     left: 65vw;
+    padding: 0px 0px;
   }
 `;
 
@@ -110,11 +112,12 @@ const Line = styled.hr`
 const ContentDetails = styled.div`
   @media (min-width: 768px) {
     width: 15vw;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 8vh;
     left: 0vw;
-    display: flex;
-    flex-direction: column;
+
     gap: 12px;
     padding-bottom: 10px;
     .list {

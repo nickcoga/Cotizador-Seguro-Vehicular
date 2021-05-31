@@ -5,7 +5,7 @@ import ChevronRight from "../assets/chevron_right.svg";
 
 const StyledButton = styled.button(
   (props) => css`
-    width: 82vw;
+    width: 80vw;
     height: 56px;
     display: flex;
     align-items: center;
@@ -27,7 +27,7 @@ const StyledButton = styled.button(
       background: ${colors.ShallowPink};
     }
     @media (min-width: 768px) {
-      width: 14vw;
+      width: 21vw;
       display: flex;
       align-items: center;
       justify-content: center;

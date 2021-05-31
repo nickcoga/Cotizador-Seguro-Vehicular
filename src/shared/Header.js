@@ -28,13 +28,12 @@ const Navbar = styled.div`
   height: 56px;
   justify-content: space-between;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
   @media (min-width: 768px) {
     height: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 `;
 

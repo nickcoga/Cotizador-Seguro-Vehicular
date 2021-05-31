@@ -3,7 +3,7 @@ import { colors } from "../constants/ColorStyles";
 
 export default function Toogle() {
   const handleChange = () => {
-    // setActive(!active);
+    // setActive(!active); // TODO: finish the toggle
   };
 
   return (

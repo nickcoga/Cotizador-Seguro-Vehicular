@@ -21,7 +21,7 @@ const Caption = styled.span(
 
 const Container = styled.div(
   (props) => css`
-    width: 296px;
+    width: 80vw;
     display: flex;
     align-items: center;
     padding: 4px 12px;
@@ -38,6 +38,10 @@ const Container = styled.div(
       border: ${`1px solid ${colors.ShallowPink}`};
       box-shadow: ${`0px 0px 4px ${colors.ShallowPink}`};
     }
+    @media (min-width: 768px) {
+      width: 21vw;
+      height: 56px;
+    }
   `
 );
 
@@ -51,6 +55,7 @@ const StyledInput = styled.input`
   border: none;
   height: 25px;
   color: ${colors.DarkGray};
+  font-size: 16px;
   &:focus {
     outline: none;
   }

@@ -3,6 +3,7 @@ import InputText from "../../../shared/InputText.js";
 import { useState } from "react";
 import Button from "../../../shared/Button.js";
 import { useHistory } from "react-router-dom";
+import { colors } from "../../../constants/ColorStyles.js";
 
 export default function FormLogin({ setUser, plate, setPlate }) {
   const [dni, setDni] = useState("");
@@ -38,7 +39,7 @@ export default function FormLogin({ setUser, plate, setPlate }) {
 
   return (
     <Form id="form1" onSubmit={handleSubmit}>
-      <h2>Dejanos tus datos</h2>
+      <Title>Déjanos tus datos</Title>
       <InputText
         required
         label=""
@@ -49,7 +50,7 @@ export default function FormLogin({ setUser, plate, setPlate }) {
       <InputText
         required
         label=""
-        placeholder="Phone"
+        placeholder="Celular"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
       />
@@ -92,6 +93,15 @@ const Form = styled.form`
   }
 `;
 
+const Title = styled.h2`
+  font-size: 28px;
+  line-height: 36px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: -0.2px;
+  color: ${colors.DarkGray};
+`;
+
 const Label = styled.label`
   width: 72vw;
   display: flex;
@@ -104,7 +114,6 @@ const Label = styled.label`
   line-height: 20px;
   letter-spacing: 0.2px;
   @media (min-width: 768px) {
-    width: 15vw;
+    width: 16vw;
   }
 `;
-// TODO: change checkbox color

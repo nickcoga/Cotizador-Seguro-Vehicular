@@ -9,7 +9,10 @@ export default function Banner() {
     <Content>
       <ContentText>
         <Text>¡Nuevo!</Text>
-        <Title>Seguro Vehicular Tracking</Title>
+        <Title>
+          Seguro <SubTitle1>Vehicular</SubTitle1>{" "}
+        </Title>
+        <SubTitle2>Tracking</SubTitle2>
         <Paragraph>Cuentanos donde le haras seguimiento a tu seguro</Paragraph>
       </ContentText>
 
@@ -50,12 +53,14 @@ const Content = styled.div`
 
 const ContentText = styled.div`
   position: absolute;
-  top: 10vh;
+  top: 16vh;
   left: 8vw;
-
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   @media (min-width: 768px) {
     position: absolute;
-    top: 50vh;
+    top: 46vh;
     left: 15vw;
   }
 `;
@@ -73,10 +78,9 @@ const ContentImage = styled.div`
     }
     .lady_car_desktop {
       position: absolute;
-      left: 17vw;
-      top: 23vh;
-
-      width: 10vw;
+      left: 15vw;
+      top: 12vh;
+      width: 13vw;
     }
   }
 `;
@@ -99,8 +103,7 @@ const Text = styled.h2`
 `;
 
 const Title = styled.h1`
-  width: 80%;
-  font-family: Lato;
+  width: 65vw;
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
@@ -111,11 +114,32 @@ const Title = styled.h1`
   @media (min-width: 768px) {
     font-size: 36px;
     line-height: 48px;
+    width: initial;
+  }
+`;
+
+const SubTitle1 = styled.span`
+  @media (min-width: 768px) {
+    color: ${colors.Red};
+  }
+`;
+
+const SubTitle2 = styled.h1`
+  color: ${colors.Red};
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.6px;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 48px;
   }
 `;
 
 const Paragraph = styled.p`
-  width: 50%;
+  width: 60vw;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -139,7 +163,8 @@ const Copyright = styled.div`
   @media (min-width: 768px) {
     position: absolute;
     top: 92vh;
-    left: 14vw;
+    left: 12vw;
     display: initial;
+    color: ${colors.LightGray};
   }
 `;

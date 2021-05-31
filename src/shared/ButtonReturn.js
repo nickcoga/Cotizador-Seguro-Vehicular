@@ -13,21 +13,6 @@ export default function ButtonReturn() {
 
 const Content = styled.div`
   display: none;
-  position: absolute;
-  top: 11vh;
-  left: 15vw;
-  align-items: center;
-  gap: 4px;
-  text-transform: uppercase;
-  .circle {
-    height: 24px;
-    width: 24px;
-    padding: 2px;
-    border: 1px solid ${colors.Red};
-    color: ${colors.Red};
-    border-radius: 80px;
-    text-align: center;
-  }
   @media (min-width: 768px) {
     position: absolute;
     top: 10vh;

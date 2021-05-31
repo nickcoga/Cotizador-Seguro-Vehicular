@@ -41,8 +41,8 @@ const ContentProgress = styled.div`
 `;
 
 const CircleReturn = styled.div`
-  height: 16px;
-  width: 16px;
+  height: 24px;
+  width: 24px;
   padding: 2px;
   color: ${colors.White};
   border: 1px solid ${colors.BorderGray};

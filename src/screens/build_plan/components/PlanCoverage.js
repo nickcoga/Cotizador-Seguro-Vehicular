@@ -10,11 +10,9 @@ export default function PlanCoverage() {
     <Container>
       <Title>Agregar o quita coberturas</Title>
       <ContentTab>
-        <Tab className="tab tab-active active-tab">Protege a tu auto</Tab>
-        <Tab className="tab tab-active active-tab">
-          Protege a los que te rodean
-        </Tab>
-        <Tab className="tab tab-active active-tab">Mejora tu plan</Tab>
+        <Tab>Protege a tu auto</Tab>
+        <Tab>Protege a los que te rodean</Tab>
+        <Tab>Mejora tu plan</Tab>
       </ContentTab>
       <ContentCoverage img={StolenTire} titleCoverage="Llanta Robada" />
       <ContentCoverage
@@ -33,16 +31,15 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
   width: 100vw;
-  height: 100vh;
-  top: 61vh;
-  left: 0vw;
+  background-color: ${colors.LighterPurple};
   @media (min-width: 768px) {
+    position: absolute;
     width: 21vw;
     height: 100vh;
-    top: 49vh;
+    top: 57vh;
     left: 38vw;
+    background-color: initial;
   }
 `;
 const Title = styled.div`
@@ -57,15 +54,18 @@ const Title = styled.div`
 
 const ContentTab = styled.div`
   display: flex;
+  width: 100vw;
+  gap: 8px;
   @media (min-width: 768px) {
     position: absolute;
     top: 12vh;
     left: 0vw;
+    width: initial;
   }
 `;
 
 const Tab = styled.button`
-  width: 128px;
+  width: 33vw;
   background-color: inherit;
   outline: none;
   transition: 0.3s;

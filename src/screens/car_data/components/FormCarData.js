@@ -117,23 +117,23 @@ export default function FormCarData({
 
 const Formcardata = styled.form`
   position: absolute;
-  top: 12vh;
+  top: 17vh;
   left: 10vw;
   @media (min-width: 768px) {
     width: 28vw;
-    height: 80vh;
+    height: 100vh;
     top: 14vh;
     left: 37vw;
   }
 `;
 
 const TextName = styled.p`
-  font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
   line-height: 36px;
   letter-spacing: -0.6px;
+  padding: 8px 0px;
 `;
 
 const Name = styled.span`
@@ -146,6 +146,7 @@ const TextDescription = styled.p`
   font-weight: normal;
   font-size: 16px;
   line-height: 28px;
+  padding-bottom: 36px;
 `;
 
 const Content = styled.div`
@@ -158,7 +159,7 @@ const Content = styled.div`
 
 const ContenRight = styled.div`
   position: absolute;
-  top: 45vh;
+  top: 58vh;
   left: 10vw;
   display: flex;
   flex-direction: column;
@@ -212,7 +213,7 @@ const HelpButton = styled.button`
 
 const Text = styled.p`
   position: absolute;
-  top: 44vh;
+  top: 58vh;
   left: 5vw;
   font-family: Lato;
   font-style: normal;
@@ -230,7 +231,7 @@ const Text = styled.p`
 
 const ContentRadioButtons = styled.div`
   position: absolute;
-  top: 50vh;
+  top: 64vh;
   left: 0vw;
   display: flex;
 
@@ -284,8 +285,9 @@ const ContentRadioButtons = styled.div`
 const Line = styled.hr`
   width: 100vw;
   position: absolute;
-  top: calc(100vh - 75px);
+  top: calc(136vh - 75px);
   left: 0vw;
+  border: 1px solid ${colors.BorderGray};
   @media (min-width: 768px) {
     width: 27vw;
     top: 48vh;
@@ -295,7 +297,7 @@ const Line = styled.hr`
 
 const ContentSum = styled.div`
   position: absolute;
-  top: 55vh;
+  top: 72vh;
   left: 0vw;
   display: flex;
   flex-direction: column;
@@ -324,6 +326,7 @@ const ContentSum = styled.div`
 `;
 
 const InputNumber = styled.div`
+  width: 80vw;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -365,8 +368,9 @@ const InputNumber = styled.div`
 
 const Copyright = styled.div`
   position: absolute;
-  top: 95vh;
+  top: 125vh;
   left: 24vw;
+  padding: 30px 0px;
   display: flex;
   font-family: Roboto;
   font-style: normal;

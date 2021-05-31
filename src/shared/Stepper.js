@@ -37,10 +37,7 @@ export default function Stepper({ enabledIndex }) {
 }
 
 const StepperMobile = styled.div`
-  position: absolute;
-  top: 57px;
-  left: 0vw;
-  width: 100%;
+  height: 48px;
   border-bottom: 1px solid ${colors.BorderGray};
   display: flex;
   align-items: center;
@@ -91,8 +88,8 @@ const Option = styled.div`
 
 const Number = styled.div(
   (props) => css`
-    height: 16px;
-    width: 16px;
+    height: 24px;
+    width: 24px;
     padding: 2px;
     background-color: ${props.enabled ? colors.Purple : colors.LightPurple};
     color: ${props.enabled ? colors.White : colors.StepColor};

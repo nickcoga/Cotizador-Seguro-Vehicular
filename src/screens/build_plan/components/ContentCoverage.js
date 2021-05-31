@@ -38,8 +38,6 @@ export default function ContentCoverage({
           <div className="only--mobile">
             <Toogle />
           </div>
-
-          {/* TODO: becomes part of the state of this component (showContent (true/false)) -> css to hide/show the input and the direction of the chevron */}
         </CoverageOption>
 
         <ContentButton onClick={handleChevronClick}>
@@ -62,7 +60,6 @@ export default function ContentCoverage({
           />
         ) : null}
 
-        {/* TODO: textarea text should be state of this component. */}
         <div className="only--mobile" onClick={handleChevronClick}>
           <label>Ver {showText ? "menos" : "más"}</label>
           <img
@@ -86,18 +83,20 @@ const Container = styled.div`
   justify-content: center;
   padding: 32px;
   .text__area {
-    width: 70vw;
+    width: 66vw;
+    height: 15vh;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
+    border: none;
   }
   @media (min-width: 768px) {
-    width: 17vw;
-
+    width: 20vw;
     .text__area {
-      width: 16vw;
+      width: 12vw;
+      height: 15vh;
     }
   }
 `;
@@ -107,6 +106,10 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 768px) {
+    width: 20vw;
+  }
 `;
 
 const CoverageOption = styled.div`
@@ -147,8 +150,8 @@ const ContentButton = styled.div`
     line-height: 16px;
     color: ${colors.Purple};
     .circle {
-      height: 16px;
-      width: 16px;
+      height: 24px;
+      width: 24px;
       padding: 2px;
       border: 1px solid ${colors.Purple};
       color: ${colors.Purple};

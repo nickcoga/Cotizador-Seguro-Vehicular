@@ -21,7 +21,7 @@ const Caption = styled.span(
 
 const Container = styled.div(
   (props) => css`
-    width: 296px;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

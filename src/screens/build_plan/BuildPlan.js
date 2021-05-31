@@ -9,7 +9,7 @@ import ContentPrice from "./components/ContentPrice";
 export default function BuildPlan({ plate, year, brand, enabledIndex }) {
   return (
     <Fragment>
-      <Header />
+      <Header showBorder />
       <Stepper enabledIndex={enabledIndex} />
       <ButtonReturn />
       <Coverage plate={plate} year={year} brand={brand} />
