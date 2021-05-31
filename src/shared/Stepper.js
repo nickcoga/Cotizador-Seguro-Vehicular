@@ -1,20 +1,33 @@
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Fragment } from "react";
 import { colors } from "../constants/ColorStyles.js";
 import Progressbar from "./Progressbar";
+import DottepLine from "../assets/dottep_line.svg";
 
-export default function Stepper() {
+const stepTitles = ["Datos del auto", "Arma tu plan"];
+
+export default function Stepper({ enabledIndex }) {
   return (
     <Fragment>
       <StepperDesktop>
-        <Contentoption>
-          <Number>1</Number>
-          <Option>Datos del auto</Option>
-        </Contentoption>
-        <Contentoption>
-          <Number>2</Number>
-          <Option>Arma tu plan</Option>
-        </Contentoption>
+        {stepTitles.map((title, index) => {
+          const isLastElement = stepTitles.length === index + 1;
+
+          return (
+            <Contentoption>
+              <Number enabled={enabledIndex === index + 1}>{index + 1}</Number>
+              {isLastElement ? null : (
+                <img
+                  className="dottep__line"
+                  src={DottepLine}
+                  alt="Dottep Line"
+                />
+              )}
+              <Option enabled={enabledIndex === index + 1}>{title}</Option>
+            </Contentoption>
+          );
+        })}
       </StepperDesktop>
       <StepperMobile>
         <Progressbar />
@@ -48,6 +61,13 @@ const StepperDesktop = styled.div`
     display: flex;
     flex-direction: column;
     gap: 48px;
+    .dottep__line {
+      width: 4px;
+      position: absolute;
+      top: 15px; // 12vh;
+      left: 9px; // calc(9vw + 9px);
+      // border: 1px solid black;
+    }
   }
 `;
 
@@ -55,8 +75,8 @@ const Contentoption = styled.div`
   width: 15vw;
   gap: 24px;
   position: relative;
-  top: 5vw;
-  left: 15vh;
+  top: 10vh;
+  left: 9vw;
   display: flex;
   align-item: center;
 `;
@@ -67,23 +87,27 @@ const Option = styled.div`
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
+  color: ${colors.StepColor};
 `;
 
-const Number = styled.div`
-  height: 16px;
-  width: 16px;
-  padding: 2px;
-  background-color: ${colors.Purple};
-  color: ${colors.White};
-  border-radius: 80px;
-  display: inline-block;
-  text-align: center;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-`;
+const Number = styled.div(
+  (props) => css`
+    height: 16px;
+    width: 16px;
+    padding: 2px;
+    background-color: ${props.enabled ? colors.Purple : colors.LightPurple};
+    color: ${props.enabled ? colors.White : colors.StepColor};
+    border: 1px solid ${props.enabled ? colors.LightPurple : colors.StepColor};
+    border-radius: 80px;
+    display: inline-block;
+    text-align: center;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  `
+);

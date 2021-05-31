@@ -13,6 +13,7 @@ export const colors = {
   White: "#FFFFFF",
   Red: "#EF3340",
   Green: "#7CC954",
+  StepColor: "#C5CBE0",
 };
 
 // const users = [

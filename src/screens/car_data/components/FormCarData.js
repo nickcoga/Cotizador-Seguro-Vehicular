@@ -9,12 +9,20 @@ import { useHistory } from "react-router";
 import Brands from "../../../constants/Brands.js";
 import { helpers } from "../../../helpers/index.js";
 
-export default function FormCarData({ user, year, setYear, brand, setBrand }) {
+export default function FormCarData({
+  user,
+  year,
+  setYear,
+  brand,
+  setBrand,
+  setEnabledIndex,
+}) {
   let history = useHistory();
   const [sum, setSum] = useState(14300);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setEnabledIndex(2);
     history.push(`/buildplan`);
   };
 

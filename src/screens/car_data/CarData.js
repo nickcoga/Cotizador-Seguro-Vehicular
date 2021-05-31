@@ -4,11 +4,19 @@ import FormCarData from "./components/FormCarData";
 import Stepper from "../../shared/Stepper";
 import ButtonReturn from "../../shared/ButtonReturn";
 
-export default function CarData({ user, year, setYear, brand, setBrand }) {
+export default function CarData({
+  user,
+  year,
+  setYear,
+  brand,
+  setBrand,
+  enabledIndex,
+  setEnabledIndex,
+}) {
   return (
     <Fragment>
       <Header showBorder={true} />
-      <Stepper />
+      <Stepper enabledIndex={enabledIndex} />
       <ButtonReturn />
       <FormCarData
         user={user}
@@ -16,6 +24,7 @@ export default function CarData({ user, year, setYear, brand, setBrand }) {
         setYear={setYear}
         brand={brand}
         setBrand={setBrand}
+        setEnabledIndex={setEnabledIndex}
       />
     </Fragment>
   );

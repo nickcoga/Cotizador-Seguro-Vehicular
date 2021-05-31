@@ -7,14 +7,14 @@ import { useHistory } from "react-router-dom";
 export default function FormLogin({ setUser, plate, setPlate }) {
   const [dni, setDni] = useState("");
   const [phone, setPhone] = useState("");
-  // const [plate, setPlate] = useState("");
+
   let history = useHistory();
 
   const handleSubmit = (e) => {
     // TODO: disable button until request is resolved to avoid making more than one request if user clicks too quickly
-    console.log("antes de prevent deafult");
+
     e.preventDefault();
-    console.log("about to submit the form");
+
     try {
       fetch(
         `https://my-json-server.typicode.com/nickcoga/Cotizador-Seguro-Vehicular/users?dni=${dni}`,

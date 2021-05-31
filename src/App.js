@@ -9,6 +9,7 @@ function App() {
   const [plate, setPlate] = useState();
   const [year, setYear] = useState(2019);
   const [brand, setBrand] = useState("Wolkswagen");
+  const [enabledIndex, setEnabledIndex] = useState(1);
 
   return (
     <Router>
@@ -35,6 +36,8 @@ function App() {
               setYear={setYear}
               brand={brand}
               setBrand={setBrand}
+              enabledIndex={enabledIndex}
+              setEnabledIndex={setEnabledIndex}
             />
           )}
         />
@@ -42,7 +45,13 @@ function App() {
         <Route
           path="/buildplan"
           render={(props) => (
-            <BuildPlan {...props} plate={plate} year={year} brand={brand} />
+            <BuildPlan
+              {...props}
+              plate={plate}
+              year={year}
+              brand={brand}
+              enabledIndex={enabledIndex}
+            />
           )}
         />
       </Switch>
