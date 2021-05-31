@@ -17,11 +17,11 @@ export default function PlanCoverage() {
       <ContentCoverage img={StolenTire} titleCoverage="Llanta Robada" />
       <ContentCoverage
         img={Shock}
-        titleCoverage="Choque y/o pasarte la luz roja "
+        titleCoverage="Choque y/o pasarte la luz roja"
       />
       <ContentCoverage
         img={TotalLoss}
-        titleCoverage="Atropello en la vía Evitamiento "
+        titleCoverage="Atropello en la vía Evitamiento"
       />
     </Container>
   );
