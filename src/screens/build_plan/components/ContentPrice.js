@@ -4,7 +4,14 @@ import Check from "../../../assets/check.svg";
 
 import { colors } from "../../../constants/ColorStyles";
 import Button from "../../../shared/Button";
+import { useHistory } from "react-router";
 export default function ContentPrice() {
+  let history = useHistory();
+
+  const handlerClick = () => {
+    history.push(`/thanks`);
+  };
+
   return (
     <Container>
       <Content>
@@ -41,7 +48,7 @@ export default function ContentPrice() {
           </div>
         </div>
         <ContentButton>
-          <Button>Lo quiero</Button>
+          <Button onClick={handlerClick}>Lo quiero</Button>
         </ContentButton>
       </ContentDetails>
     </Container>
