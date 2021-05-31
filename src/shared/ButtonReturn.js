@@ -1,10 +1,17 @@
 import styled from "@emotion/styled";
+import { useHistory } from "react-router";
 import ChrevronLeft from "../assets/chevron_left_orange.svg";
 import { colors } from "../constants/ColorStyles";
 
 export default function ButtonReturn() {
+  let history = useHistory();
+
+  const handlerClick = () => {
+    history.goBack();
+  };
+
   return (
-    <Content>
+    <Content onClick={handlerClick}>
       <img className="circle" src={ChrevronLeft} alt="Return Icon" />
       <div>Volver</div>
     </Content>
