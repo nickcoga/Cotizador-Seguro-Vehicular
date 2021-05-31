@@ -15,7 +15,7 @@ export default function Stepper({ enabledIndex }) {
           const isLastElement = stepTitles.length === index + 1;
 
           return (
-            <Contentoption>
+            <Contentoption key={title}>
               <Number enabled={enabledIndex === index + 1}>{index + 1}</Number>
               {isLastElement ? null : (
                 <img
