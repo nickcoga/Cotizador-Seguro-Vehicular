@@ -2,13 +2,14 @@ import { useState } from "react";
 import styled from "@emotion/styled";
 import ChevronUp from "../../../assets/chevron_up.svg";
 import ChevronDown from "../../../assets/chevron_down.svg";
-import Toogle from "../../../shared/Toogle";
+import Toggle from "../../../shared/Toggle";
 import { colors } from "../../../constants/ColorStyles";
 
 export default function ContentCoverage({
   img,
   titleCoverage = "",
   chevronArrow,
+  toggleName,
 }) {
   // controls if the text should show or hide
   const [showText, setShowText] = useState(false);
@@ -36,7 +37,7 @@ export default function ContentCoverage({
           />
 
           <div className="only--mobile">
-            <Toogle />
+            <Toggle toggleName={toggleName} />
           </div>
         </CoverageOption>
 

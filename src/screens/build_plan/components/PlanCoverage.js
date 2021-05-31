@@ -14,14 +14,20 @@ export default function PlanCoverage() {
         <Tab>Protege a los que te rodean</Tab>
         <Tab>Mejora tu plan</Tab>
       </ContentTab>
-      <ContentCoverage img={StolenTire} titleCoverage="Llanta Robada" />
+      <ContentCoverage
+        img={StolenTire}
+        titleCoverage="Llanta Robada"
+        toggleName="stolen_tire"
+      />
       <ContentCoverage
         img={Shock}
         titleCoverage="Choque y/o pasarte la luz roja"
+        toggleName="shock"
       />
       <ContentCoverage
         img={TotalLoss}
         titleCoverage="Atropello en la vía Evitamiento"
+        toggleName="total_loss"
       />
     </Container>
   );
