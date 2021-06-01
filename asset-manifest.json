@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Cotizador-Seguro-Vehicular/static/css/main.555a914f.chunk.css",
-    "main.js": "/Cotizador-Seguro-Vehicular/static/js/main.82fff209.chunk.js",
-    "main.js.map": "/Cotizador-Seguro-Vehicular/static/js/main.82fff209.chunk.js.map",
+    "main.js": "/Cotizador-Seguro-Vehicular/static/js/main.350b62d0.chunk.js",
+    "main.js.map": "/Cotizador-Seguro-Vehicular/static/js/main.350b62d0.chunk.js.map",
     "runtime-main.js": "/Cotizador-Seguro-Vehicular/static/js/runtime-main.806f0be1.js",
     "runtime-main.js.map": "/Cotizador-Seguro-Vehicular/static/js/runtime-main.806f0be1.js.map",
     "static/js/2.8dbad38b.chunk.js": "/Cotizador-Seguro-Vehicular/static/js/2.8dbad38b.chunk.js",
@@ -37,6 +37,6 @@
     "static/js/runtime-main.806f0be1.js",
     "static/js/2.8dbad38b.chunk.js",
     "static/css/main.555a914f.chunk.css",
-    "static/js/main.82fff209.chunk.js"
+    "static/js/main.350b62d0.chunk.js"
   ]
 }
