@@ -28,7 +28,7 @@ export default function Banner() {
           alt="Home"
         />
         <img
-          className="only--desktop lady_car_desktop" // TODO: check BEM convention for classes
+          className="only--desktop lady_car_desktop"
           src={LadyCarDesktop}
           alt="Lady with car"
         />

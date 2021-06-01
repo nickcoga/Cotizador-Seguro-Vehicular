@@ -6,7 +6,6 @@ export default function Toggle({ toggleName }) {
   const [checked, setChecked] = useState();
 
   const handleChange = () => {
-    // setActive(!active); // TODO: finish the toggle
     setChecked(!checked);
   };
 

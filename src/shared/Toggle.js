@@ -1,13 +1,9 @@
-import { useState } from "react";
 import styled from "@emotion/styled";
 import { colors } from "../constants/ColorStyles";
 
-export default function Toggle({ toggleName }) {
-  const [checked, setChecked] = useState();
-
+export default function Toggle({ toggleName, toggle, setToggle }) {
   const handleChange = () => {
-    // setActive(!active); // TODO: finish the toggle
-    setChecked(!checked);
+    setToggle(!toggle);
   };
 
   return (
@@ -17,7 +13,7 @@ export default function Toggle({ toggleName }) {
         name={toggleName}
         className="mobileToggle"
         id={toggleName}
-        value={checked}
+        value={toggle}
         onChange={handleChange}
       />
       <label htmlFor={toggleName}></label>
@@ -37,7 +33,7 @@ const Container = styled.div`
     transition: 0.4s ease;
     height: 30px;
     width: 50px;
-    border: 1px solid #e4e4e4;
+    border: 1px solid ${colors.borderToggle};
     border-radius: 60px;
   }
   input.mobileToggle + label:before {
@@ -58,7 +54,7 @@ const Container = styled.div`
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0px 0 rgba(0, 0, 0, 0.04),
       0 4px 9px rgba(0, 0, 0, 0.13), 0 3px 3px rgba(0, 0, 0, 0.05);
     transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
-    background: whitesmoke;
+    background: ${colors.backgroundToggle};
     height: 28px;
     width: 28px;
     top: 1px;
@@ -66,7 +62,7 @@ const Container = styled.div`
     border-radius: 60px;
   }
   input.mobileToggle:checked + label:before {
-    background: #2ecc71;
+    background: ${colors.Green};
     transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
   }
   input.mobileToggle:checked + label:after {

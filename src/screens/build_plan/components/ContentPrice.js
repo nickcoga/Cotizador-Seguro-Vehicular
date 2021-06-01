@@ -1,22 +1,41 @@
 import styled from "@emotion/styled";
+import { useState, useEffect } from "react";
 import Flexible from "../../../assets/flexible_vehicular.svg";
 import Check from "../../../assets/check.svg";
-
 import { colors } from "../../../constants/ColorStyles";
 import Button from "../../../shared/Button";
 import { useHistory } from "react-router";
-export default function ContentPrice() {
+import { helpers } from "../../../helpers/index.js";
+import {
+  basePrice,
+  stolenTirePrice,
+  shockPrice,
+  totalLossPrice,
+} from "../../../constants/Prices";
+
+export default function ContentPrice({ toggle1, toggle2, toggle3 }) {
   let history = useHistory();
 
+  const [sum, setSum] = useState(basePrice);
+
+  useEffect(() => {
+    setSum(
+      basePrice +
+        (toggle1 ? stolenTirePrice : 0) +
+        (toggle2 ? shockPrice : 0) +
+        (toggle3 ? totalLossPrice : 0)
+    );
+  }, [toggle1, toggle2, toggle3]);
+
   const handlerClick = () => {
-    history.push(`/thanks`);
+    history.push("/thanks");
   };
 
   return (
     <Container>
       <Content>
         <Price>
-          <div>$35.00</div>
+          <div>${helpers.fixDecimalsFormatter(sum)}</div>
           <p>mensuales</p>
         </Price>
 
@@ -139,9 +158,11 @@ const ContentDetails = styled.div`
 `;
 
 const ContentButton = styled.div`
-  width: 60vw;
+  width: 50vw;
+  margin-left: 30px;
   @media (min-width: 768px) {
-    width: 224px;
+    width: 15vw;
     padding-top: 32px;
+    margin-left: 0px;
   }
 `;
