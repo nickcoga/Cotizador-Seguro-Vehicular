@@ -1,5 +1,5 @@
 const BASE_URL =
-  "https://my-json-server.typicode.com/nickcoga/Cotizador-Seguro-Vehicular/";
+  "https://my-json-server.typicode.com/nickcoga/Cotizador-Seguro-Vehicular";
 
 async function apiFetch(...args) {
   const response = await fetch(...args);

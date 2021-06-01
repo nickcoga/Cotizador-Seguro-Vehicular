@@ -7,12 +7,19 @@ function UsersService() {
   return UsersService.instance;
 }
 
-UsersService.prototype.show = (dni) =>
-  apiFetch(`${BASE_URL}/users?dni=${dni}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json; charset=UTF-8",
-    },
-  });
+// As my services have two parameters, their default values are null
+
+UsersService.prototype.show = (nroDoc, typeDoc) =>
+  apiFetch(
+    `${BASE_URL}/users?${
+      typeDoc === "Dni" ? `dni=${nroDoc}` : `passport=${nroDoc}`
+    }`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json; charset=UTF-8",
+      },
+    }
+  );
 
 export default UsersService;

@@ -5,10 +5,13 @@ import Button from "../../../shared/Button.js";
 import { useHistory, Link } from "react-router-dom";
 import { colors } from "../../../constants/ColorStyles.js";
 import UserService from "../../../services/users_services.js";
+import InputTextSelect from "../../../shared/InputTextSelect.js";
+import typeDocs from "../../../constants/TypeDocs.js";
 
 export default function FormLogin({ setUser, plate, setPlate }) {
-  const [dni, setDni] = useState("");
   const [phone, setPhone] = useState("");
+  const [nroDoc, setNroDoc] = useState("");
+  const [typeDoc, setTypeDoc] = useState("Dni");
 
   let history = useHistory();
 
@@ -16,24 +19,26 @@ export default function FormLogin({ setUser, plate, setPlate }) {
     e.preventDefault();
 
     const usersService = new UserService();
-    const user = await usersService.show(dni);
-    console.log(user[0]);
-    setUser(user[0]);
+    const [user] = await usersService.show(nroDoc, typeDoc);
+    setUser(user);
 
-    history.push(`/cardata/${user.id}`);
+    history.push(`/cardata/${user.id}`); // TODO: handled error
   };
 
   return (
     <Form id="form1" onSubmit={handleSubmit}>
       <Title>Déjanos tus datos</Title>
       <ContentInputs>
-        <InputText
+        <InputTextSelect
           required
-          label=""
-          placeholder="Nro. de Doc"
-          value={dni}
-          onChange={(e) => setDni(e.target.value)}
+          options={typeDocs}
+          placeholderInput="Nro. de Doc"
+          valueInput={nroDoc}
+          valueSelect={typeDoc}
+          onChangeInput={(e) => setNroDoc(e.target.value)}
+          onChangeSelect={(e) => setTypeDoc(e.target.value)}
         />
+
         <InputText
           required
           label=""
@@ -67,8 +72,6 @@ export default function FormLogin({ setUser, plate, setPlate }) {
           Términos y Condiciones.
         </Link>
       </Label>
-
-      {/* https://reactrouter.com/web/api/Link */}
 
       <ContainerButton>
         <Button showArrow type="submit" form="form1">
