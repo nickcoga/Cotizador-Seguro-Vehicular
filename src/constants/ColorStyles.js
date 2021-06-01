@@ -16,4 +16,6 @@ export const colors = {
   Green: "#7CC954",
   StepColor: "#C5CBE0",
   RegularGray: "#676F8F",
+  borderToggle: "#e4e4e4",
+  backgroundToggle: "#f5f5f5",
 };

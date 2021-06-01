@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import InputText from "../../../shared/InputText.js";
 import { useState } from "react";
 import Button from "../../../shared/Button.js";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { colors } from "../../../constants/ColorStyles.js";
 
 export default function FormLogin({ setUser, plate, setPlate }) {
@@ -65,9 +65,23 @@ export default function FormLogin({ setUser, plate, setPlate }) {
 
       <Label>
         <input type="checkbox" required />
-        Acepto la Política de Protección de Datos Personales y los Términos y
-        Condiciones.
+        Acepto la{" "}
+        <Link
+          className="link"
+          to="https://www.rimac.com.pe/uploads/Ley29733_proteccion_de_datos_personales.pdf"
+        >
+          Política de Protección de Datos Personales
+        </Link>{" "}
+        y los{" "}
+        <Link
+          className="link"
+          to="https://rimac.com/content/dam/rimac/publica/rimac/footer/TERMINOS-Y-CONDICIONES.pdf"
+        >
+          Términos y Condiciones.
+        </Link>
       </Label>
+
+      {/* https://reactrouter.com/web/api/Link */}
 
       <ContainerButton>
         <Button showArrow type="submit" form="form1">
@@ -117,9 +131,6 @@ const ContentInputs = styled.div`
 
 const Label = styled.label`
   width: 80vw;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
   padding: 24px 0px 32px 0px;
   font-family: Roboto;
   font-style: normal;
@@ -127,6 +138,16 @@ const Label = styled.label`
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 0.2px;
+
+  .link {
+    color: ${colors.RegularGray};
+    text-decoration: underline;
+    text-decoration-color: ${colors.RegularGray};
+  }
+  input {
+    margin-right: 10px;
+  }
+
   @media (min-width: 768px) {
     width: 288px;
     padding: 24px 0px 40px 0px;
