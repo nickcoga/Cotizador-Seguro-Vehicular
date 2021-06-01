@@ -4,6 +4,7 @@ import { useState } from "react";
 import Button from "../../../shared/Button.js";
 import { useHistory, Link } from "react-router-dom";
 import { colors } from "../../../constants/ColorStyles.js";
+import UserService from "../../../services/users_services.js";
 
 export default function FormLogin({ setUser, plate, setPlate }) {
   const [dni, setDni] = useState("");
@@ -11,29 +12,15 @@ export default function FormLogin({ setUser, plate, setPlate }) {
 
   let history = useHistory();
 
-  const handleSubmit = (e) => {
-    // TODO: disable button until request is resolved to avoid making more than one request if user clicks too quickly
-
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      fetch(
-        `https://my-json-server.typicode.com/nickcoga/Cotizador-Seguro-Vehicular/users?dni=${dni}`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json; charset=UTF-8",
-          },
-        }
-      )
-        .then((response) => response.json())
-        .then((json) => {
-          setUser(json[0]);
-          history.push(`/cardata/${json[0].id}`);
-        });
-    } catch (error) {
-      console.error(error); // TODO: show error message on screen
-    }
+    const usersService = new UserService();
+    const user = await usersService.show(dni);
+    console.log(user[0]);
+    setUser(user[0]);
+
+    history.push(`/cardata/${user.id}`);
   };
 
   return (
