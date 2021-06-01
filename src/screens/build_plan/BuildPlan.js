@@ -21,7 +21,10 @@ export default function BuildPlan({
     <Fragment>
       <Header showBorder />
       <Stepper enabledIndex={enabledIndex} setEnabledIndex={setEnabledIndex} />
-      <ButtonReturn />
+      <ButtonReturn
+        enabledIndex={enabledIndex}
+        setEnabledIndex={setEnabledIndex}
+      />
       <Coverage plate={plate} year={year} brand={brand} />
       <PlanCoverage
         toggle1={toggle1}

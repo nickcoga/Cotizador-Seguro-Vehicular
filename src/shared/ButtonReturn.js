@@ -3,10 +3,13 @@ import { useHistory } from "react-router";
 import ChrevronLeft from "../assets/chevron_left_orange.svg";
 import { colors } from "../constants/ColorStyles";
 
-export default function ButtonReturn() {
+export default function ButtonReturn({ enabledIndex, setEnabledIndex }) {
   let history = useHistory();
 
   const handlerClick = () => {
+    if (enabledIndex > 1) {
+      setEnabledIndex(enabledIndex - 1);
+    }
     history.goBack();
   };
 
