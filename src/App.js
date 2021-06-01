@@ -52,6 +52,7 @@ function App() {
               year={year}
               brand={brand}
               enabledIndex={enabledIndex}
+              setEnabledIndex={setEnabledIndex}
             />
           )}
         />

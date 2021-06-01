@@ -6,7 +6,13 @@ import Coverage from "./components/Coverage";
 import PlanCoverage from "./components/PlanCoverage";
 import ContentPrice from "./components/ContentPrice";
 
-export default function BuildPlan({ plate, year, brand, enabledIndex }) {
+export default function BuildPlan({
+  plate,
+  year,
+  brand,
+  enabledIndex,
+  setEnabledIndex,
+}) {
   const [toggle1, setToggle1] = useState(false);
   const [toggle2, setToggle2] = useState(false);
   const [toggle3, setToggle3] = useState(false);
@@ -14,7 +20,7 @@ export default function BuildPlan({ plate, year, brand, enabledIndex }) {
   return (
     <Fragment>
       <Header showBorder />
-      <Stepper enabledIndex={enabledIndex} />
+      <Stepper enabledIndex={enabledIndex} setEnabledIndex={setEnabledIndex} />
       <ButtonReturn />
       <Coverage plate={plate} year={year} brand={brand} />
       <PlanCoverage

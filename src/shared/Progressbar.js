@@ -2,18 +2,33 @@ import styled from "@emotion/styled";
 import { Fragment } from "react";
 import { colors } from "../constants/ColorStyles.js";
 import Chevronleft from "../assets/chevron_left.svg";
+import { useHistory } from "react-router";
 
-export default function Progressbar() {
+export default function Progressbar({ enabledIndex, setEnabledIndex }) {
+  let history = useHistory();
+
+  const handleClick = () => {
+    if (enabledIndex > 1) {
+      setEnabledIndex(enabledIndex - 1);
+    }
+
+    history.goBack();
+  };
+
   return (
     <Fragment>
       <ContentProgress>
-        <CircleReturn>
+        <CircleReturn onClick={handleClick}>
           <img src={Chevronleft} alt="Chevronleft" />
         </CircleReturn>
-        <StepText>PASO 1 DE 2</StepText>
+        <StepText>PASO {enabledIndex} DE 2</StepText>
 
-        <progress className="progress" value="32" max="100">
-          32%
+        <progress
+          className="progress"
+          value={enabledIndex === 1 ? "50" : "100"}
+          max="100"
+        >
+          {enabledIndex === 1 ? "50%" : "100%"}
         </progress>
       </ContentProgress>
     </Fragment>

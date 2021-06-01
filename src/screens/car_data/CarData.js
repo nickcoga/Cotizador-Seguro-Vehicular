@@ -16,7 +16,7 @@ export default function CarData({
   return (
     <Fragment>
       <Header showBorder={true} />
-      <Stepper enabledIndex={enabledIndex} />
+      <Stepper enabledIndex={enabledIndex} setEnabledIndex={setEnabledIndex} />
       <ButtonReturn />
       <FormCarData
         user={user}

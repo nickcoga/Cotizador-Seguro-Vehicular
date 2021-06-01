@@ -7,7 +7,7 @@ import DottepLine from "../assets/dottep_line.svg";
 
 const stepTitles = ["Datos del auto", "Arma tu plan"];
 
-export default function Stepper({ enabledIndex }) {
+export default function Stepper({ enabledIndex, setEnabledIndex }) {
   return (
     <Fragment>
       <StepperDesktop>
@@ -30,7 +30,10 @@ export default function Stepper({ enabledIndex }) {
         })}
       </StepperDesktop>
       <StepperMobile>
-        <Progressbar />
+        <Progressbar
+          enabledIndex={enabledIndex}
+          setEnabledIndex={setEnabledIndex}
+        />
       </StepperMobile>
     </Fragment>
   );
