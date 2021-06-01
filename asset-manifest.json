@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/Cotizador-Seguro-Vehicular/static/css/main.555a914f.chunk.css",
+    "main.js": "/Cotizador-Seguro-Vehicular/static/js/main.82fff209.chunk.js",
+    "main.js.map": "/Cotizador-Seguro-Vehicular/static/js/main.82fff209.chunk.js.map",
+    "runtime-main.js": "/Cotizador-Seguro-Vehicular/static/js/runtime-main.806f0be1.js",
+    "runtime-main.js.map": "/Cotizador-Seguro-Vehicular/static/js/runtime-main.806f0be1.js.map",
+    "static/js/2.8dbad38b.chunk.js": "/Cotizador-Seguro-Vehicular/static/js/2.8dbad38b.chunk.js",
+    "static/js/2.8dbad38b.chunk.js.map": "/Cotizador-Seguro-Vehicular/static/js/2.8dbad38b.chunk.js.map",
+    "static/js/3.06bbee8b.chunk.js": "/Cotizador-Seguro-Vehicular/static/js/3.06bbee8b.chunk.js",
+    "static/js/3.06bbee8b.chunk.js.map": "/Cotizador-Seguro-Vehicular/static/js/3.06bbee8b.chunk.js.map",
+    "index.html": "/Cotizador-Seguro-Vehicular/index.html",
+    "static/css/main.555a914f.chunk.css.map": "/Cotizador-Seguro-Vehicular/static/css/main.555a914f.chunk.css.map",
+    "static/js/2.8dbad38b.chunk.js.LICENSE.txt": "/Cotizador-Seguro-Vehicular/static/js/2.8dbad38b.chunk.js.LICENSE.txt",
+    "static/media/car.e12126f8.svg": "/Cotizador-Seguro-Vehicular/static/media/car.e12126f8.svg",
+    "static/media/check.3198116e.svg": "/Cotizador-Seguro-Vehicular/static/media/check.3198116e.svg",
+    "static/media/chevron_down.c5b40f05.svg": "/Cotizador-Seguro-Vehicular/static/media/chevron_down.c5b40f05.svg",
+    "static/media/chevron_left.894008c7.svg": "/Cotizador-Seguro-Vehicular/static/media/chevron_left.894008c7.svg",
+    "static/media/chevron_left_orange.521164bd.svg": "/Cotizador-Seguro-Vehicular/static/media/chevron_left_orange.521164bd.svg",
+    "static/media/chevron_right.fe9ed838.svg": "/Cotizador-Seguro-Vehicular/static/media/chevron_right.fe9ed838.svg",
+    "static/media/chevron_up.e866ae93.svg": "/Cotizador-Seguro-Vehicular/static/media/chevron_up.e866ae93.svg",
+    "static/media/dottep_line.e27f3aab.svg": "/Cotizador-Seguro-Vehicular/static/media/dottep_line.e27f3aab.svg",
+    "static/media/flexible_vehicular.57bf8e97.svg": "/Cotizador-Seguro-Vehicular/static/media/flexible_vehicular.57bf8e97.svg",
+    "static/media/home_background.6d1f3a16.svg": "/Cotizador-Seguro-Vehicular/static/media/home_background.6d1f3a16.svg",
+    "static/media/ic_phone.f2f3fd02.svg": "/Cotizador-Seguro-Vehicular/static/media/ic_phone.f2f3fd02.svg",
+    "static/media/lady_car_desktop.6c86a8e8.svg": "/Cotizador-Seguro-Vehicular/static/media/lady_car_desktop.6c86a8e8.svg",
+    "static/media/lady_car_mobile.82e20536.svg": "/Cotizador-Seguro-Vehicular/static/media/lady_car_mobile.82e20536.svg",
+    "static/media/person_background_desktop.7bc50a0c.svg": "/Cotizador-Seguro-Vehicular/static/media/person_background_desktop.7bc50a0c.svg",
+    "static/media/person_background_mobile.581511cd.svg": "/Cotizador-Seguro-Vehicular/static/media/person_background_mobile.581511cd.svg",
+    "static/media/person_card.2071ac6f.svg": "/Cotizador-Seguro-Vehicular/static/media/person_card.2071ac6f.svg",
+    "static/media/rimac_logo.95e747eb.svg": "/Cotizador-Seguro-Vehicular/static/media/rimac_logo.95e747eb.svg",
+    "static/media/shock.efab2cca.svg": "/Cotizador-Seguro-Vehicular/static/media/shock.efab2cca.svg",
+    "static/media/stolen_tire.b950ba28.svg": "/Cotizador-Seguro-Vehicular/static/media/stolen_tire.b950ba28.svg",
+    "static/media/total_loss.81009f0a.svg": "/Cotizador-Seguro-Vehicular/static/media/total_loss.81009f0a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.806f0be1.js",
+    "static/js/2.8dbad38b.chunk.js",
+    "static/css/main.555a914f.chunk.css",
+    "static/js/main.82fff209.chunk.js"
+  ]
+}
