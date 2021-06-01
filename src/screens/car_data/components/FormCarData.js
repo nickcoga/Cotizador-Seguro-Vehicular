@@ -156,6 +156,7 @@ const Content = styled.div`
   flex-direction: column;
   align-items: center;
   width: 80vw;
+  gap: 16px;
   @media (min-width: 768px) {
     width: 20vw;
   }

@@ -53,7 +53,7 @@ const InputLabel = styled.label`
 const StyledInput = styled.input`
   width: 100%;
   border: none;
-  height: 25px;
+  height: 40px;
   color: ${colors.DarkGray};
   font-size: 16px;
   &:focus {

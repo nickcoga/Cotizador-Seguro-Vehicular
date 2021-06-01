@@ -52,7 +52,7 @@ const Container = styled.div(
     border-radius: 4px;
     gap: 4px;
     height: fit-content;
-    margin-bottom: 16px;
+
     &:hover {
       border: ${`1px solid ${colors.ShallowPink}`};
     }
