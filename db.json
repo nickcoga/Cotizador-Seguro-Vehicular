@@ -4,19 +4,23 @@
       "id": 1,
       "name": "Jhon Doe",
       "dni": 45789632,
-      "phone": "951357486"
+      "phone": "951357486",
+      "email": "JhonDoe@gmail.com"
     },
     {
       "id": 2,
       "name": "Juan Perez",
-      "dni": 48759632,
-      "phone": "987456123"
+      "passport": 48759632,
+      "phone": "987456123",
+      "email": "JuanPerez@gmail.com"
     },
     {
       "id": 3,
       "name": "Nico",
-      "dni": 46312598,
-      "phone": "954685231"
+      "dni": 446454443,
+      "phone": "954685231",
+      "passport": "123456789",
+      "email": "Nicoga@gmail.com"
     }
   ],
   "cars": [
