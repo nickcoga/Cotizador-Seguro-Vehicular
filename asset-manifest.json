@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Cotizador-Seguro-Vehicular/static/css/main.555a914f.chunk.css",
-    "main.js": "/Cotizador-Seguro-Vehicular/static/js/main.9735d685.chunk.js",
-    "main.js.map": "/Cotizador-Seguro-Vehicular/static/js/main.9735d685.chunk.js.map",
+    "main.js": "/Cotizador-Seguro-Vehicular/static/js/main.eaddcebc.chunk.js",
+    "main.js.map": "/Cotizador-Seguro-Vehicular/static/js/main.eaddcebc.chunk.js.map",
     "runtime-main.js": "/Cotizador-Seguro-Vehicular/static/js/runtime-main.806f0be1.js",
     "runtime-main.js.map": "/Cotizador-Seguro-Vehicular/static/js/runtime-main.806f0be1.js.map",
-    "static/js/2.2c94beee.chunk.js": "/Cotizador-Seguro-Vehicular/static/js/2.2c94beee.chunk.js",
-    "static/js/2.2c94beee.chunk.js.map": "/Cotizador-Seguro-Vehicular/static/js/2.2c94beee.chunk.js.map",
+    "static/js/2.454877d5.chunk.js": "/Cotizador-Seguro-Vehicular/static/js/2.454877d5.chunk.js",
+    "static/js/2.454877d5.chunk.js.map": "/Cotizador-Seguro-Vehicular/static/js/2.454877d5.chunk.js.map",
     "static/js/3.06bbee8b.chunk.js": "/Cotizador-Seguro-Vehicular/static/js/3.06bbee8b.chunk.js",
     "static/js/3.06bbee8b.chunk.js.map": "/Cotizador-Seguro-Vehicular/static/js/3.06bbee8b.chunk.js.map",
     "index.html": "/Cotizador-Seguro-Vehicular/index.html",
     "static/css/main.555a914f.chunk.css.map": "/Cotizador-Seguro-Vehicular/static/css/main.555a914f.chunk.css.map",
-    "static/js/2.2c94beee.chunk.js.LICENSE.txt": "/Cotizador-Seguro-Vehicular/static/js/2.2c94beee.chunk.js.LICENSE.txt",
+    "static/js/2.454877d5.chunk.js.LICENSE.txt": "/Cotizador-Seguro-Vehicular/static/js/2.454877d5.chunk.js.LICENSE.txt",
     "static/media/car.e12126f8.svg": "/Cotizador-Seguro-Vehicular/static/media/car.e12126f8.svg",
     "static/media/check.3198116e.svg": "/Cotizador-Seguro-Vehicular/static/media/check.3198116e.svg",
     "static/media/chevron_down.c5b40f05.svg": "/Cotizador-Seguro-Vehicular/static/media/chevron_down.c5b40f05.svg",
@@ -35,8 +35,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.806f0be1.js",
-    "static/js/2.2c94beee.chunk.js",
+    "static/js/2.454877d5.chunk.js",
     "static/css/main.555a914f.chunk.css",
-    "static/js/main.9735d685.chunk.js"
+    "static/js/main.eaddcebc.chunk.js"
   ]
 }
