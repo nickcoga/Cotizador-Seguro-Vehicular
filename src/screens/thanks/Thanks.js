@@ -5,7 +5,7 @@ import Header from "../../shared/Header";
 import { colors } from "../../constants/ColorStyles";
 import Button from "../../shared/Button";
 
-export default function Thanks() {
+export default function Thanks({ user }) {
   return (
     <Container>
       <Header showBorder />
@@ -30,7 +30,7 @@ export default function Thanks() {
             tu correo:
           </Email>
 
-          <Email> joel.sanchez@gmail.com</Email>
+          <Email>{user.email}</Email>
         </Description>
         <ContainerButton>
           <Button>CÓMO USAR MI SEGURO</Button>

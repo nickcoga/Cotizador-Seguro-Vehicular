@@ -56,7 +56,10 @@ function App() {
             />
           )}
         />
-        <Route path="/thanks" component={Thanks} />
+        <Route
+          path="/thanks"
+          render={(props) => <Thanks {...props} user={user} />}
+        />
       </Switch>
     </Router>
   );
