@@ -21,8 +21,8 @@ export default function FormLogin({ setUser, plate, setPlate }) {
     const usersService = new UserService();
     const [user] = await usersService.show(nroDoc, typeDoc);
     setUser(user);
-
-    history.push(`/cardata/${user.id}`); // TODO: handled error
+    // TODO: handle error when user doesn't exist in db.json
+    history.push(`/cardata/${user.id}`);
   };
 
   return (
@@ -60,14 +60,22 @@ export default function FormLogin({ setUser, plate, setPlate }) {
         Acepto la{" "}
         <Link
           className="link"
-          to="https://www.rimac.com.pe/uploads/Ley29733_proteccion_de_datos_personales.pdf"
+          to={{
+            pathname:
+              "https://www.rimac.com.pe/uploads/Ley29733_proteccion_de_datos_personales.pdf",
+          }}
+          target="_blank"
         >
           Política de Protección de Datos Personales
         </Link>{" "}
         y los{" "}
         <Link
           className="link"
-          to="https://rimac.com/content/dam/rimac/publica/rimac/footer/TERMINOS-Y-CONDICIONES.pdf"
+          to={{
+            pathname:
+              "https://rimac.com/content/dam/rimac/publica/rimac/footer/TERMINOS-Y-CONDICIONES.pdf",
+          }}
+          target="_blank"
         >
           Términos y Condiciones.
         </Link>
