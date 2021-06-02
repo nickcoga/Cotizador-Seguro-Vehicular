@@ -4,6 +4,11 @@ Developer: Nick Correa Garcia
 
 The app is deployed [here](https://nickcoga.github.io/Cotizador-Seguro-Vehicular/)
 
+LightHose Mobile: ![image](https://user-images.githubusercontent.com/68827067/120421760-80188500-c32c-11eb-9265-bb3cd4770a5a.png)
+
+LightHose Desktop: ![image](https://user-images.githubusercontent.com/68827067/120421573-2f089100-c32c-11eb-8bf0-5e27edec6032.png)
+
+
 ## Libraries/Tools used and why they were selected
 
 The majority of the following tools that I've used on this project are the ones that I learned about first, and the ones that I have the most experience with.
