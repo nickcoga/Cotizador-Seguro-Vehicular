@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import InputText from "../../../shared/InputText.js";
 import { useState } from "react";
 import Button from "../../../shared/Button.js";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { colors } from "../../../constants/ColorStyles.js";
 import UserService from "../../../services/users_services.js";
 import InputTextSelect from "../../../shared/InputTextSelect.js";
@@ -58,27 +58,19 @@ export default function FormLogin({ setUser, plate, setPlate }) {
       <Label>
         <input type="checkbox" required />
         Acepto la{" "}
-        <Link
+        <a
           className="link"
-          to={{
-            pathname:
-              "https://www.rimac.com.pe/uploads/Ley29733_proteccion_de_datos_personales.pdf",
-          }}
-          target="_blank"
+          href="https://www.rimac.com.pe/uploads/Ley29733_proteccion_de_datos_personales.pdf"
         >
           Política de Protección de Datos Personales
-        </Link>{" "}
+        </a>{" "}
         y los{" "}
-        <Link
+        <a
           className="link"
-          to={{
-            pathname:
-              "https://rimac.com/content/dam/rimac/publica/rimac/footer/TERMINOS-Y-CONDICIONES.pdf",
-          }}
-          target="_blank"
+          href="https://rimac.com/content/dam/rimac/publica/rimac/footer/TERMINOS-Y-CONDICIONES.pdf"
         >
           Términos y Condiciones.
-        </Link>
+        </a>
       </Label>
 
       <ContainerButton>
